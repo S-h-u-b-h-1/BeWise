@@ -1,90 +1,124 @@
 import React, { useState } from "react";
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "../styles/header.css";
-
+import { useAuth } from "../firebase/AuthContext";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase/firebaseConfig";
 
 function Header() {
-const [showFeatures, setShowFeatures] = useState(false);
-const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-const navigate = useNavigate();
+  const [showFeatures, setShowFeatures] = useState(false)
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { user } = useAuth() || {}
+  const navigate = useNavigate()
+
+  const handleLogout = async () => {
+    await signOut(auth)
+    navigate("/login")
+  };
 
 
-const avatarURL = ""
-return (
+  const avatarURL = user
+    ? `https://media.istockphoto.com/id/1231978424/vector/bended-line-letter-logotype-u.jpg?s=1024x1024&w=is&k=20&c=uVihPsmbL-aoYqdqtGYCUDh9kakTY9ktki-QlWOEmss=`
+    : ""
+
+  return (
     <header className="header-container">
-    <div className="logo-hamburger">
+      <div className="logo-b">
         <div 
-        className="logo-container" 
-        style={{ cursor: "pointer" }} 
-        onClick={() => navigate("/")}
-        >
-        <img alt="Travel Logo" />
+          className="logo-container" 
+          style={{ cursor: "pointer" }} 
+          onClick={() => navigate("/")}
+          >
+          <img src="https://img.icons8.com/?size=100&id=110881&format=png&color=000000" alt="logo"/>
         </div>
-
 
         <div
-        className="icon"
-        onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+          className="b"
+          onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
         >
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
         </div>
-    </div>
+      </div>
 
-    {/* Nav Links */}
-    <div className={`nav-links ${isMobileMenuOpen ? "mobile-open" : ""}`}>
+      <div className={`nav-links ${isMobileMenuOpen ? "mobile-open" : ""}`}>
         <Link 
-        to="/" 
-        className="nav-btn" 
-        onClick={() => setMobileMenuOpen(false)}
+          to="/" 
+          className="nav-btn" 
+          onClick={() => setMobileMenuOpen(false)}
         >
-        Home
+          Home
         </Link>
         <Link 
-        to="/blog" 
-        className="nav-btn" 
-        onClick={() => setMobileMenuOpen(false)}
+          to="/blog" 
+          className="nav-btn" 
+          onClick={() => setMobileMenuOpen(false)}
         >
-        Blog
+          Blog
         </Link>
         <Link 
-        to="/contact" 
-        className="nav-btn" 
-        onClick={() => setMobileMenuOpen(false)}
+          to="/contact" 
+          className="nav-btn" 
+          onClick={() => setMobileMenuOpen(false)}
         >
-        Contact Us
+          Contact Us
         </Link>
 
         <div
-        className="dropdown"
-        style={{ marginTop: -25, top: "100%" }}
-        onMouseEnter={() => setShowFeatures(true)}
-        onMouseLeave={() => setShowFeatures(false)}
+          className="dropdown"
+          style={{ marginTop: -25, top: "100%" }}
+          onMouseEnter={() => setShowFeatures(true)}
+          onMouseLeave={() => setShowFeatures(false)}
         >
-        <button className="nav-btn dropbtn">Features</button>
-        {showFeatures && (
+          <button className="nav-btn dropbtn">Features</button>
+          {showFeatures && (
             <div className="dropdown-content" >
-            <Link to="/planner" onClick={() => setShowFeatures(false)}>
-            Plan
-            </Link>
-            <Link to="/budget" onClick={() => setShowFeatures(false)}>
-            Track
-            </Link>
-            <Link to="/CurrencyConverter" onClick={() => setShowFeatures(false)}>
-            Currency Converter
-            </Link>
-            <Link to="/Goals" onClick={() => setShowFeatures(false)}>
-            Budget Goals
-            </Link>
-            </div>
-        )}
-        </div>
-    </div>
+              <Link to="/planner" onClick={() => setShowFeatures(false)}>
+              Plan Your Trip
+              </Link>
+              <Link to="/Goals" onClick={() => setShowFeatures(false)}>
+              Set Budget Goals
+              </Link>
+              <Link to="/budget" onClick={() => setShowFeatures(false)}>
+              Track Expenses
+              </Link>
+              <Link to="/CurrencyConverter" onClick={() => setShowFeatures(false)}>
+              Currency Converter
+              </Link>
 
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className="auth-links">
+        {!user ? (
+          <>
+            <Link to="/signup" className="auth-btn">Sign Up</Link>
+            <Link to="/login" className="auth-btn">Login</Link>
+          </>
+        ) : (
+          <>
+            <img
+              src={avatarURL}
+              alt="User Avatar"
+              className="profile-avatar pt"
+              onClick={() => navigate("/profile")}
+              style={{
+                cursor: "pointer",
+                width: "40px",
+                height: "40px",
+                borderRadius: "50%",
+              }}
+            />
+            <button onClick={handleLogout} className="auth-btn pt">Logout</button>
+          </>
+        )}
+      </div>
     </header>
-);
+  );
 }
 
 export default Header;

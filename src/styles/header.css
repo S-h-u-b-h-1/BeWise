@@ -4,7 +4,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 0 1.5rem;
-background-color: #070068;
+background-color: #3490dc;
 box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 height: 5.5rem;
 position: relative;
@@ -13,15 +13,15 @@ z-index: 10;
 
 /* ========== LOGO ========== */
 .logo-container {
-cursor: pointer;
-display: flex;
-align-items: center;
-width: auto;
+    cursor: pointer;
+    /* display: flex; */
+    /* align-items: center;
+    width: auto; */
 }
 
 .logo-container img {
 height: 70px;
-width: auto;
+width: 70px;
 }
 
 /* ========== NAV LINKS ========== */
@@ -163,7 +163,7 @@ transition: 0.4s;
     color: #38bdf8;
 }
 
-.hamburger {
+.b {
     display: flex;
     position: absolute;
     left: 1rem;

@@ -1,6 +1,6 @@
 footer {
-    background-color: #070068;
-    color: white;
+    background-color: #3490dc;
+    color: whitesmoke;
     padding: 40px 5%;
     margin-top: auto;
 }
@@ -22,7 +22,7 @@ footer {
 .footer-section h3 {
     font-size: 18px;
     margin-bottom: 15px;
-    color: #2563eb;
+    color: #fff;
 }
 
 .footer-section p {
@@ -72,7 +72,6 @@ color: #4A90E2;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Form Styles */
 .contact-form {
     display: flex;
     flex-direction: column;

@@ -24,7 +24,7 @@ function Footer() {
             >
           </p>
           <p>
-            <a href="/Contact" 
+            <a href="/contact" 
               >Contact Us</a
             >
           </p>

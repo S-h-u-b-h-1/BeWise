@@ -19,7 +19,7 @@ function Header() {
 
 
   const avatarURL = user
-    ? `https://media.istockphoto.com/id/1231978424/vector/bended-line-letter-logotype-u.jpg?s=1024x1024&w=is&k=20&c=uVihPsmbL-aoYqdqtGYCUDh9kakTY9ktki-QlWOEmss=`
+    ? `https://api.dicebear.com/7.x/initials/svg?seed=${user.displayName || user.email}`
     : ""
 
   return (

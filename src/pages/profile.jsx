@@ -11,13 +11,15 @@ function Profile() {
     <div className="profile-page">
       <div className="profile-card">
         <div className="avatar">
-          <img src="https://media.istockphoto.com/id/1231978424/vector/bended-line-letter-logotype-u.jpg?s=1024x1024&w=is&k=20&c=uVihPsmbL-aoYqdqtGYCUDh9kakTY9ktki-QlWOEmss=" alt="User Avatar" />
+          <img src={`https://api.dicebear.com/7.x/initials/svg?seed=${user.displayName || user.email}`} alt="User Avatar" />
         </div>
         <h2>{user.displayName || "User"}</h2>
         <p className="email">{user.email}</p>
         <p className="joined">Member since: {new Date(user.metadata.creationTime).toLocaleDateString()}</p>
 
-
+        <div className="profile-actions">
+          <button className="edit-btn">Edit Profile</button>
+        </div>
       </div>
     </div>
   );

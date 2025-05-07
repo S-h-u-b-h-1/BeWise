@@ -9,7 +9,7 @@ function Footer() {
         <div className="footer-section">
           <h3>About Us</h3>
           <h4>
-          BeWise helps travelers plan, <br/>track, and manage their trip <br/>expenses with ease. From <br/>setting budget goals to monitoring <br/>real-time spending, we make <br/>travel smarter and stress-free.
+          BeWise helps travelers plan, track, and manage their trip expenses with ease. From setting budget goals to monitoring real-time spending, we make travel smarter and stress-free.
           </h4>
         </div>
 

@@ -56,11 +56,6 @@
     outline: none;
   }
   
-  .error-message {
-    color: #d32f2f;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-  }
   
   .auth-form button {
     width: 100%;

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 import "../styles/header.css";
 import { useAuth } from "../firebase/AuthContext";
 import { signOut } from "firebase/auth";

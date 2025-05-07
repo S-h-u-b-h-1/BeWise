@@ -16,6 +16,7 @@ footer {
 .footer-section {
     flex: 1;
     min-width: 250px;
+    margin:15px;
     margin-bottom: 20px;
 }
 
@@ -33,23 +34,6 @@ footer {
 .footer-section a {
     text-decoration: none;
     color: white;
-}
-
-.social-icons {
-margin-top: 20px;
-}
-
-.social-icons a {
-text-decoration: none;
-margin: 0 10px;
-color: #fff;
-font-size: 20px;
-transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-transform: scale(1.2);
-color: #4A90E2;
 }
 
 
@@ -72,53 +56,8 @@ color: #4A90E2;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    margin-bottom: 10px;
-}
-
-.contact-form button {
-    background-color: #2563eb;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-    background-color: #2563eb;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
-    padding: 15px 3%;
-    }
-
-    .logo span {
-    font-size: 20px;
-    }
-
-    .nav-links {
-    gap: 15px;
-    }
-
-    .quote {
-    font-size: 20px;
-    }
-
     .footer-content {
     flex-direction: column;
     }

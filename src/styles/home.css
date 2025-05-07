@@ -11,40 +11,7 @@ body{
     margin-top: 200rem;
 }
 
-.hero {
-    margin-bottom: 3rem;
-}
 
-.title {
-    font-size: 3rem;
-    color: #00f2ff; 
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 10px #00f2ff;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    color: #7dd3fc; 
-    margin-bottom: 2rem;
-}
-
-.cta-button {
-    margin-top: 1rem;
-    display: inline-block;
-    background-color: #00f2ff;
-    color: #0e255c;
-    padding: 0.7rem 1.5rem;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s, transform 0.3s;
-    box-shadow: 0 0 10px #00f2ff;
-}
-
-.cta-button:hover {
-    background-color: #38bdf8;
-    transform: translateY(-2px);
-}
 
 .features {
     display: flex;
@@ -90,23 +57,7 @@ body{
         padding: 0;
         margin: 0;
     }
-    
-    .hero {
-        margin-bottom: 3rem;
-    }
-    
-    .title {
-        font-size: 3rem;
-        color: #14089b;
-        margin-bottom: 0.5rem;
-    }
-    
-    .subtitle {
-        font-size: 1.2rem;
-        color: #14089b;
-        margin-bottom: 2rem;
-    }
-    
+
     .button-group {
         display: flex;
         gap: 1rem;
@@ -131,22 +82,6 @@ body{
         background-color: #a5d6a7; 
         color: white;
         transform: translateY(-2px);
-    }
-    
-    .cta-button {
-        margin-top: 1rem;
-        display: inline-block;
-        background-color: #14089b; 
-        color: rgb(255, 255, 255);
-        padding: 0.7rem 1.5rem;
-        border-radius: 25px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: background 0.3s;
-    }
-    
-    .cta-button:hover {
-        background-color: #000f2a;
     }
     
     .features {

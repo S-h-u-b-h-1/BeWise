@@ -52,8 +52,7 @@
     margin-top: 1.5rem;
   }
   
-  .edit-btn,
-  .logout-btn {
+  .edit-btn{
     padding: 0.6rem 1.2rem;
     font-size: 1rem;
     border: none;
@@ -61,18 +60,11 @@
     cursor: pointer;
     transition: 0.3s ease;
     width: 100%;
-  }
-  
-  .edit-btn {
     background-color: #38bdf8;
     color: #0f172a;
   }
   
-  .logout-btn {
-    background-color: #ef4444;
-    color: white;
-  }
-  
+
   .edit-btn:hover {
     background-color: #0ea5e9;
   }

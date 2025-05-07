@@ -150,6 +150,7 @@ const Contact = () => {
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
+
             />
             <button type="submit" className="contact-button">
               Send Message

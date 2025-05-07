@@ -78,22 +78,23 @@
 }
 
 .contact-form {
-    flex: 1;
+    flex: 2;
     min-width: 280px;
     background-color: #1d263b;
-    padding: 30px;
+    padding: 35px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     animation: fadeIn 1s ease-in-out;
 }
 
-.contact-form form {
+.contact-form{
     display: flex;
     flex-direction: column;
+    gap:1px;
 }
 
 .contact-input-box {
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
 .contact-input,

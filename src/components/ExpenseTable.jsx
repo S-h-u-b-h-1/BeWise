@@ -17,7 +17,7 @@ return (
         <tr key={exp.id}>
             <td>{exp.date}</td>
             <td>{exp.description}</td>
-            <td>${exp.amount}</td>
+            <td>₹{exp.amount}</td>
             <td>{exp.category}</td>
             <td>
             <button onClick={() => onEdit(exp)}>Edit</button>

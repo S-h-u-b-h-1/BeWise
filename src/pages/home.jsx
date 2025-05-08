@@ -49,7 +49,7 @@ return (
 
         <div className="feature-card">
         <img src="https://img.icons8.com/?size=100&id=55997&format=png&color=000000" alt="Goals" />
-        <h3>Budget Goals</h3>
+        <h2>Budget Goals</h2>
         <p>Set Limits, Stay on Track - Budget Smarter for Every Journey.</p>
         <button onClick={navigateToBudget} className="cta-button">Goals</button>
         </div>

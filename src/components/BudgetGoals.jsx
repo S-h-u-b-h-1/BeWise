@@ -1,4 +1,3 @@
-// BudgetGoals.js
 import React, { useState, useEffect } from "react";
 import { db } from "../firebase/firebaseConfig";
 import { ref, set, get } from "firebase/database";
@@ -8,9 +7,9 @@ const BudgetGoals = ({ userId }) => {
 
   useEffect(() => {
     const fetchBudgets = async () => {
-      const response = await get(ref(db, `users/${userId}/budgets`))
+      const response = await get(ref(db, `users/${userId}/budgets`));
       if (response.exists()) {
-        setBudgets(response.val())
+        setBudgets(response.val());
       }
     };
     fetchBudgets()

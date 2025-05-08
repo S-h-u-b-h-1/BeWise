@@ -49,18 +49,18 @@ body{
 .cta-button {
     margin-top: 1rem;
     display: inline-block;
-    background-color: #3490dc;
+    background-color: #49ccf4;
     color: #0f172a;
     padding: 0.7rem 1.5rem;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     transition: background 0.3s, transform 0.3s;
-    box-shadow: 0 0 10px #3490dc;
+    box-shadow: 0 0 10px #49ccf4;
 }
 
 .cta-button:hover {
-background-color: #38bdf8;
+background-color: #3490dc;
 transform: translateY(-2px);
 }
 .home-container {

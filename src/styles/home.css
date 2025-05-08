@@ -17,7 +17,6 @@ body{
     display: flex;
     justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap;
     margin-top: 3rem;
 }
 
@@ -74,32 +73,6 @@ transform: translateY(-2px);
         margin: 0;
     }
 
-    .button-group {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        margin-bottom: 1.5rem;
-    }
-    
-    .auth-button {
-        padding: 0.6rem 1.4rem;
-        font-size: 1rem;
-        border: none;
-        background-color: white;
-        color: #388e3c; 
-        border-radius: 30px;
-        font-weight: bold;
-        cursor: pointer;
-        border: 2px solid #81c784; 
-        transition: all 0.3s ease;
-    }
-    
-    .auth-button:hover {
-        background-color: #a5d6a7; 
-        color: white;
-        transform: translateY(-2px);
-    }
-    
     .features {
         display: flex;
         justify-content: center;

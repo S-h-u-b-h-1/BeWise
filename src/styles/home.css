@@ -49,14 +49,14 @@ body{
 .cta-button {
     margin-top: 1rem;
     display: inline-block;
-    background-color: #00f2ff;
+    background-color: #3490dc;
     color: #0f172a;
     padding: 0.7rem 1.5rem;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     transition: background 0.3s, transform 0.3s;
-    box-shadow: 0 0 10px #00f2ff;
+    box-shadow: 0 0 10px #3490dc;
 }
 
 .cta-button:hover {

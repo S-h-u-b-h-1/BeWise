@@ -86,6 +86,16 @@ function Planner() {
           </li>
         </ul>
       </section>
+
+      <section className='maps' style={{ textAlign: 'center' }}>
+        <div>
+        <iframe
+				src="https://www.google.com/maps/embed/v1/place?q=London,India&key=AIzaSyBgdvn9YGKSukiA0Mc_Ecx4e2ofm6AYUyc"
+				width="600"
+				height="450"
+			></iframe>
+      </div>
+      </section>
     </div>
   );
 }
